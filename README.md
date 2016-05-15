@@ -4,6 +4,10 @@
 
 [GNU Stow](https://www.gnu.org/software/stow/) is a symlink farm manager, useful for automatically (and safely) linking your dotfiles folder into your home directory.
 
+install stow
+
+    brew install stow
+
 enter the dotfiles directory
 
     cd dotfiles
