@@ -2,7 +2,9 @@
 
 > you are your dotfiles.
 
-[GNU Stow](https://www.gnu.org/software/stow/) is a symlink farm manager, useful for automatically (and safely) linking your dotfiles folder into your home directory.
+Dotfiles here are being managed using [GNU Stow](https://www.gnu.org/software/stow/)–a symlink farm manager, useful for automatically (and safely) linking your dotfiles folder into your home directory.
+
+### How to use:
 
 install stow
 
