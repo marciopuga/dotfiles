@@ -116,7 +116,7 @@ autocmd BufNewFile,BufRead *.less set ft=less.css "Sets filetype of less to be c
 
 
 " ================ Completion =======================
-set wildignore=node_modules/*,*.jpg,*.png,*.gif,*.woff
+set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS           " Gives css auto completion to files using filetype=css
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
