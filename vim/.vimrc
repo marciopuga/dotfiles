@@ -58,6 +58,13 @@ imap jj <Esc>
 " Turn off Ex mode
 nnoremap Q <nop>
 
+" Mappings to move lines
+" http://vim.wikia.com/wiki/Moving_lines_up_or_down
+nnoremap ∆ :m .+1<CR>== " Alt + j
+nnoremap ˚ :m .-2<CR>== "Alt + k
+vnoremap ˚ :m '<-2<CR>gv=gv
+vnoremap ∆ :m '>+1<CR>gv=gv
+
 " Enter newlines without entering insert mode
 " http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
 nnoremap <CR> o<Esc>k
@@ -65,7 +72,6 @@ nnoremap <CR> o<Esc>k
 " Absolute line numbers in insert mode, relative otherwise for easy movement
 au InsertEnter * :set norelativenumber
 au InsertLeave * :set relativenumber
-
 
 " ================ Theme  ======================
 set guifont=Inconsolata\ for\ Powerline:h15
