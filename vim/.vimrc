@@ -73,6 +73,8 @@ nnoremap <CR> o<Esc>k
 au InsertEnter * :set norelativenumber
 au InsertLeave * :set relativenumber
 
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 " ================ Theme  ======================
 set guifont=Inconsolata\ for\ Powerline:h15
 set t_Co=256
@@ -100,11 +102,11 @@ set undodir=~/.vim/undodir
 " ================ Indentation ======================
 filetype plugin indent on " This gets vim to automatically load filetype specific options for plugins and indentation
 set smartindent
-set tabstop=4
-set shiftwidth=4
 set expandtab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
+au Filetype css setl et ts=4 sw=4
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
 
 " Fix indenting for css style things (sass, css)
