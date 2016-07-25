@@ -143,7 +143,8 @@ let b:delimitMate_jump_expansion = 1
 
 
 " ================ Scrolling ========================
-set scrolloff=999         " Keeps the cursor vertically centered.
+" I don't like this anymore
+" set scrolloff=999         " Keeps the cursor vertically centered.
 
 
 " ================ Search ===========================
