@@ -24,8 +24,8 @@ alias rm='rm -i -v'
 alias cp='cp -v'
 
 #shotcuts
-alias pg='cd code/playground'
-alias amex='cd code/playground/amex'
+alias pg='cd ~/code/playground'
+alias amex='cd ~/code/playground/amex'
 
 function lazygit() {
     git commit -a -m "$*"
