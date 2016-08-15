@@ -1,0 +1,6 @@
+pane	amex-server	0	:zsh	0	:-	0	:/Users/marciopuga/code/playground/amex/amex-server	1	zsh	:
+pane	amex-server	0	:zsh	0	:-	1	:/Users/marciopuga/code/playground/amex/amex-server	0	node	:node /usr/local/bin/nodemon index.js
+pane	amex-server	1	:Vim	1	:*	0	:/Users/marciopuga/code/playground/amex/amex-server	1	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim
+window	amex-server	0	0	:-	802e,175x47,0,0{87x47,0,0,0,87x47,88,0,1}
+window	amex-server	1	1	:*	bebf,175x44,0,0,2
+state	amex-server	

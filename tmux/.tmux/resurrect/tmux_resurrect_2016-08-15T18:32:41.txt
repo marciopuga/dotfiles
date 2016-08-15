@@ -1,0 +1,9 @@
+pane	amex-parser	0	:Vim	1	:*	0	:/Users/marciopuga/code/playground/amex/parser	1	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim
+pane	amex-parser	0	:Vim	1	:*	1	:/Users/marciopuga/code/playground/amex/parser	0	node	:node /usr/local/bin/nodemon payments.js
+pane	amex-server	0	:zsh	1	:*	0	:/Users/marciopuga/code/playground/amex/amex-server	1	zsh	:
+pane	amex-server	0	:zsh	1	:*	1	:/Users/marciopuga/code/playground/amex/amex-server	0	node	:node /usr/local/bin/nodemon index.js
+pane	amex-server	1	:Vim	0	:-	0	:/Users/marciopuga/code/playground/amex/amex-server	1	Vim	:/usr/local/Cellar/macvim/7.4-94/MacVim.app/Contents/MacOS/Vim
+window	amex-parser	0	1	:*	cd2f,175x44,0,0{87x44,0,0,3,87x44,88,0,4}
+window	amex-server	0	1	:*	4d22,175x44,0,0{87x44,0,0,0,87x44,88,0,1}
+window	amex-server	1	0	:-	bebf,175x44,0,0,2
+state	amex-server	
