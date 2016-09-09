@@ -1,8 +1,3 @@
-set nocompatible
-set shell=bash
-
-filetype off
-
 " =============== Vundle Initialization ===============
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -11,7 +6,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'gavocanov/vim-js-indent'
 Plugin 'klen/python-mode'
 Bundle 'mxw/vim-jsx'
 Plugin 'tpope/vim-fugitive'
@@ -73,7 +70,6 @@ nnoremap <CR> o<Esc>k
 au InsertEnter * :set norelativenumber
 au InsertLeave * :set relativenumber
 
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " ================ Theme  ======================
 set guifont=Inconsolata\ for\ Powerline:h15
@@ -100,9 +96,7 @@ set undodir=~/.vim/undodir
 
 
 " ================ Indentation ======================
-filetype plugin indent on " This gets vim to automatically load filetype specific options for plugins and indentation
-set smartindent
-set expandtab
+filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
