@@ -7,9 +7,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'christoomey/vim-tmux-navigator'
-Bundle 'mxw/vim-jsx'
+Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'isRuslan/vim-es6'
 Plugin 'klen/python-mode'
 Plugin 'tpope/vim-fugitive'
@@ -95,7 +94,8 @@ set undodir=~/.vim/undodir
 
 
 " ================ Indentation ======================
-" let g:jsx_ext_required = 0
+let g:polyglot_disabled = ['javascript', 'jsx']
+let g:jsx_ext_required = 0
 filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 au Filetype python setl et ts=4 sw=4

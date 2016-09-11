@@ -32,6 +32,3 @@ function lazygit() {
     git push
 }
 
-function gc() {
-  git commit -m "$*"
-}
