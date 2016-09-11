@@ -5,20 +5,19 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'gavocanov/vim-js-indent'
-Plugin 'klen/python-mode'
+Plugin 'christoomey/vim-tmux-navigator'
 Bundle 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'isRuslan/vim-es6'
+Plugin 'klen/python-mode'
 Plugin 'tpope/vim-fugitive'
 Plugin 'sjl/gundo.vim'
 Plugin 'othree/html5.vim'
-Plugin 'isRuslan/vim-es6'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -96,13 +95,13 @@ set undodir=~/.vim/undodir
 
 
 " ================ Indentation ======================
+" let g:jsx_ext_required = 0
 filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
 au Filetype css setl et ts=4 sw=4
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
-
 " Fix indenting for css style things (sass, css)
 au BufEnter *.css set nocindent
 au BufLeave *.css set cindent
