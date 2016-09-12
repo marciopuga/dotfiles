@@ -7,7 +7,7 @@ alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."

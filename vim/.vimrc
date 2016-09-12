@@ -7,6 +7,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'bcicen/vim-vice'
+Plugin 'cseelus/vim-colors-lucid'
+Plugin 'dracula/vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
@@ -83,7 +86,7 @@ if !has("gui_running")
     let g:solarized_termcolors=256
 endif
 
-colorscheme solarized
+colorscheme Monokai
 set background=dark
 
 
