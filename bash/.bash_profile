@@ -5,10 +5,6 @@ export PATH=${PATH}:$HOME/Dev/gsutil
 export ANT_HOME=$HOME/Dev/apache-ant-1.9.4
 alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
-# Set CLICOLOR if you want Ansi Colors in iTerm2
-export CLICOLOR=1
-# export TERM=xterm-256color
-
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias cd..="cd .."
@@ -27,8 +23,4 @@ alias cp='cp -v'
 alias pg='cd ~/code/playground'
 alias amex='cd ~/code/playground/amex'
 
-function lazygit() {
-    git commit -a -m "$*"
-    git push
-}
 

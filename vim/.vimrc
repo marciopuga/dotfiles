@@ -78,7 +78,7 @@ set guifont=Inconsolata\ for\ Powerline:h15
 set t_Co=256
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
+set term=screen-256color
 set termencoding=utf-l8
 
 if !has("gui_running")
