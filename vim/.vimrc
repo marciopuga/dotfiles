@@ -7,6 +7,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'mtglsk/wikipedia.vim'
 Plugin 'bcicen/vim-vice'
 Plugin 'cseelus/vim-colors-lucid'
 Plugin 'dracula/vim'
@@ -86,7 +87,7 @@ if !has("gui_running")
     let g:solarized_termcolors=256
 endif
 
-colorscheme Monokai
+colorscheme Solarized
 set background=dark
 
 
@@ -121,7 +122,7 @@ autocmd BufNewFile,BufRead *.less set ft=less.css "Sets filetype of less to be c
 
 
 " ================ Completion =======================
-set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff
+set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff,.DS_Store
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS           " Gives css auto completion to files using filetype=css
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
