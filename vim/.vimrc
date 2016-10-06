@@ -1,3 +1,6 @@
+set nocompatible
+filetype off
+
 " =============== Vundle Initialization ===============
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -19,20 +22,18 @@ Plugin 'klen/python-mode'
 Plugin 'tpope/vim-fugitive'
 Plugin 'sjl/gundo.vim'
 Plugin 'othree/html5.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ternjs/tern_for_vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Solarized'
-
 call vundle#end()
-
 
 " ================ General Config ====================
 let mapleader = ","
@@ -83,8 +84,8 @@ set term=screen-256color
 set termencoding=utf-l8
 
 if !has("gui_running")
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=256
+	let g:solarized_termtrans=1
+	let g:solarized_termcolors=256
 endif
 
 colorscheme Solarized
@@ -107,6 +108,7 @@ au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
 au Filetype css setl et ts=4 sw=4
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
+
 " Fix indenting for css style things (sass, css)
 au BufEnter *.css set nocindent
 au BufLeave *.css set cindent
@@ -128,11 +130,13 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " here for UltiSnips and YCM
+let g:ycm_use_ultisnips_completer = 1
 let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<s-Tab>', '<Up>']
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-h>"
 
 " DelimitMate
 let b:delimitMate_expand_cr = 1
@@ -169,7 +173,7 @@ noremap <leader>9 9gt
 
 " Local list nav
 nnoremap fj :execute "noautocmd vimgrep /" . expand("<cword>") . "/j **" <Bar> cnext<CR>
-
+nmap <leader>r :TagbarToggle<CR>
 
 " ================ Plugin - Gundo  ===========================
 " Custom Plugin Mappings
