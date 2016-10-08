@@ -181,11 +181,12 @@ nmap <leader>r :TagbarToggle<CR>
 nnoremap -- :GundoToggle<CR>
 
 nnoremap <leader>v :e $MYVIMRC<CR>
-nnoremap <leader>gx :Gbrowse<CR>
-nnoremap <leader>g :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>c :ccl<CR>
-nnoremap <leader>o :copen<CR>
+"rebind my favorite commands from Git.vim for Fugitive
+nmap <leader>g :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
 map <Esc><Esc> :w<CR>
 
 
