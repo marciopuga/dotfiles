@@ -187,6 +187,8 @@ nmap <leader>gc :Gcommit<cr>
 nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
+nmap <leader>gp :Gpush<cr>
+
 map <Esc><Esc> :w<CR>
 
 
