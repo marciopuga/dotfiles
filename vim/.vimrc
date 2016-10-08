@@ -33,6 +33,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Solarized'
+Plugin 'gorodinskiy/vim-coloresque.git'
 call vundle#end()
 
 " ================ General Config ====================

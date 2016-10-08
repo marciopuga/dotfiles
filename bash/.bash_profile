@@ -22,5 +22,3 @@ alias cp='cp -v'
 #shotcuts
 alias pg='cd ~/code/playground'
 alias amex='cd ~/code/playground/amex'
-
-
