@@ -59,6 +59,7 @@ nmap ; :
 
 " Escape also mapped to jj
 imap jj <Esc>
+set clipboard=unnamed
 
 " Copy/Paste/Cut
 if has('unnamedplus')
