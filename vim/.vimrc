@@ -1,40 +1,42 @@
 set nocompatible
 filetype off
 
-" =============== Vundle Initialization ===============
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"*****************************************************************************
+"" Plug install packages
+"*****************************************************************************
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'mtglsk/wikipedia.vim'
-Plugin 'bcicen/vim-vice'
-Plugin 'cseelus/vim-colors-lucid'
-Plugin 'dracula/vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
-Plugin 'klen/python-mode'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sjl/gundo.vim'
-Plugin 'othree/html5.vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'scrooloose/syntastic'
-Plugin 'Raimondi/delimitMate'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'scrooloose/nerdtree'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'vim-scripts/Solarized'
-Plugin 'gorodinskiy/vim-coloresque.git'
-call vundle#end()
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
+Plug 'flazz/vim-colorschemes'
+Plug 'mtglsk/wikipedia.vim'
+Plug 'bcicen/vim-vice'
+Plug 'cseelus/vim-colors-lucid'
+Plug 'dracula/vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+Plug 'klen/python-mode'
+Plug 'tpope/vim-fugitive'
+Plug 'sjl/gundo.vim'
+Plug 'othree/html5.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'scrooloose/syntastic'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdtree'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'
+Plug 'ternjs/tern_for_vim'
+Plug 'honza/vim-snippets'
+Plug 'vim-scripts/Solarized'
+Plug 'gorodinskiy/vim-coloresque.git'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
 
 " ================ General Config ====================
 let mapleader = ","
@@ -46,8 +48,9 @@ syntax enable             " Sets syntax highlighting on because what is this not
 
 set mouse=a
 
-set clipboard=unnamed     " Shared clipboard with MacOS
-set encoding=utf-8        " Duh
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
 set history=5112          " Default is 20, I'd rather set this to infinity
 set nofoldenable          " Don't fold shit because it's the worst.
 
@@ -57,8 +60,22 @@ nmap ; :
 " Escape also mapped to jj
 imap jj <Esc>
 
+" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+
+if has('macunix')
+  " pbcopy for OSX copy/paste
+  vmap <C-x> :!pbcopy<CR>
+  vmap <C-c> :w !pbcopy<CR><CR>
+endif
+
+
 " Turn off Ex mode
 nnoremap Q <nop>
+
+map <Esc><Esc> :w<CR>
 
 " Mappings to move lines
 " http://vim.wikia.com/wiki/Moving_lines_up_or_down
@@ -91,6 +108,15 @@ endif
 
 colorscheme Solarized
 set background=dark
+
+" vim-airline
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline_skip_empty_sections = 1
+
 
 
 " ================ Turn Off Swap Files ==============
@@ -145,16 +171,14 @@ let delimitMate_expand_cr = 1
 let b:delimitMate_jump_expansion = 1
 
 
-" ================ Scrolling ========================
-" I don't like this anymore
-" set scrolloff=999         " Keeps the cursor vertically centered.
-
-
 " ================ Search ===========================
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+
+"" Clean search (highlight)
+nnoremap <silent> <leader><space> :noh<cr>
 
 
 " ================ Navigation  ===========================
@@ -172,16 +196,33 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-" Local list nav
-nnoremap fj :execute "noautocmd vimgrep /" . expand("<cword>") . "/j **" <Bar> cnext<CR>
-nmap <leader>r :TagbarToggle<CR>
+"" Change tabs using <Tab> on normal mode
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
 
-" ================ Plugin - Gundo  ===========================
-" Custom Plugin Mappings
-nnoremap -- :GundoToggle<CR>
-
+" Open VIMRC
 nnoremap <leader>v :e $MYVIMRC<CR>
-"rebind my favorite commands from Git.vim for Fugitive
+
+"" ctrlp.vim
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|git|hg|svn))$'
+let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
+let g:ctrlp_use_caching = 1
+noremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+
+"" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+
+
+" ================ Fugitive  ===========================
 nmap <leader>g :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>ga :Gwrite<cr>
@@ -189,10 +230,8 @@ nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gp :Gpush<cr>
 
-map <Esc><Esc> :w<CR>
 
-
-" ================ Plugin - Syntastic  ===========================
+" ================ Syntastic  ===========================
 " show any linting errors immediately
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_w = 0
@@ -201,4 +240,3 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_loc_list_height = 5
-
