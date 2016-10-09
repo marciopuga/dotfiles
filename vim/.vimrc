@@ -160,6 +160,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<s-Tab>', '<Up>']
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
