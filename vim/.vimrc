@@ -51,7 +51,8 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set history=5112          " Default is 20, I'd rather set this to infinity
 set nofoldenable          " Don't fold shit because it's the worst.
-
+noremap <silent> <Leader>- :split<CR>
+noremap <silent> <Leader><bar> :vsplit<CR>
 " testing the user of semi colon as colon
 nmap ; :
 
