@@ -45,9 +45,7 @@ set title                 " Sets the title at top of tab to be the filename if "
 set number                " Line numbers on the left hand side
 set visualbell            " That bell is the worst sound. Shut it the fuck off.
 syntax enable             " Sets syntax highlighting on because what is this notepad
-
 set mouse=a
-
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -71,7 +69,6 @@ if has('macunix')
   vmap <C-x> :!pbcopy<CR>
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
-
 
 " Turn off Ex mode
 nnoremap Q <nop>
@@ -117,7 +114,6 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
-
 
 
 " ================ Turn Off Swap Files ==============
@@ -198,7 +194,7 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-Open VIMRC
+" Open VIMRC
 nnoremap <leader>v :e $MYVIMRC<CR>
 
 "" ctrlp.vim
