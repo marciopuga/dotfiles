@@ -198,12 +198,7 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-"" Change tabs using <Tab> on normal mode
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
-
-" Open VIMRC
+Open VIMRC
 nnoremap <leader>v :e $MYVIMRC<CR>
 
 "" ctrlp.vim
@@ -216,6 +211,7 @@ noremap <leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+map <leader>C :CtrlPClearCache<cr>
 
 "" Switching windows
 noremap <C-j> <C-w>j
@@ -236,9 +232,9 @@ nmap <leader>gp :Gpush<cr>
 " ================ Syntastic  ===========================
 " show any linting errors immediately
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_w = 0
+let g:syntastic_check_on_w = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_loc_list_height = 5
+let g:syntastic_loc_list_height = 4
