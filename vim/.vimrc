@@ -9,11 +9,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
-Plug 'flazz/vim-colorschemes'
-Plug 'mtglsk/wikipedia.vim'
-Plug 'bcicen/vim-vice'
-Plug 'cseelus/vim-colors-lucid'
-Plug 'dracula/vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
@@ -30,12 +25,19 @@ Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
-Plug 'vim-scripts/Solarized'
-Plug 'gorodinskiy/vim-coloresque.git'
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Themes
+Plug 'flazz/vim-colorschemes'
+Plug 'mtglsk/wikipedia.vim'
+Plug 'bcicen/vim-vice'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'cseelus/vim-colors-lucid'
+Plug 'vim-scripts/Solarized'
+Plug 'https://github.com/gko/vim-coloresque'
+Plug 'muellan/am-colors'
+Plug 'dracula/vim'
 call plug#end()
 
 " ================ General Config ====================
@@ -107,6 +109,14 @@ endif
 
 colorscheme Solarized
 set background=dark
+
+" Go to colorscheme by number
+noremap <leader>1 :colorscheme Monokai<cr>
+noremap <leader>2 :colorscheme Solarized<cr>
+noremap <leader>3 :colorscheme Dracula<cr>
+noremap <leader>4 :colorscheme lucid<cr>
+noremap <leader>5 :colorscheme amcolors<cr> :set background=dark<cr>
+noremap <leader>6 :colorscheme vice<cr>
 
 " vim-airline
 let g:airline_theme = 'powerlineish'
@@ -184,17 +194,6 @@ nnoremap <silent> <leader><space> :noh<cr>
 " "Toggle NERDtree
 map <C-n> :NERDTreeToggle<CR>
 
-" Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-
 " Open VIMRC
 nnoremap <leader>v :e $MYVIMRC<CR>
 
@@ -208,7 +207,7 @@ noremap <leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-map <leader>C :CtrlPClearCache<cr>
+map <leader>r :CtrlPClearCache<cr>
 
 "" Switching windows
 noremap <C-j> <C-w>j
