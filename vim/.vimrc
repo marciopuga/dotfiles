@@ -59,7 +59,7 @@ noremap <silent> <Leader><bar> :vsplit<CR>
 nmap ; :
 
 " Escape also mapped to jj
-imap jj <Esc>
+imap jj <Esc> :w<CR>
 set clipboard=unnamed
 
 " Copy/Paste/Cut
@@ -175,9 +175,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-h>"
 
 " DelimitMate
-let b:delimitMate_expand_cr = 1
-let delimitMate_expand_cr = 1
-let b:delimitMate_jump_expansion = 1
+let delimitMate_expand_cr = 2
+" let b:delimitMate_expand_cr = 1
+" let delimitMate_expand_cr = 1
+" let b:delimitMate_jump_expansion = 1
 
 
 " ================ Search ===========================
@@ -200,7 +201,7 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 "" ctrlp.vim
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|git|hg|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)|(\.(swp|tox|ico|git|hg|svn))$'
 let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
 let g:ctrlp_use_caching = 1
 noremap <leader>b :CtrlPBuffer<CR>
