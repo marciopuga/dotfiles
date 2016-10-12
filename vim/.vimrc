@@ -216,6 +216,9 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
+" Navigating between open buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 " ================ Fugitive  ===========================
 nmap <leader>g :Gstatus<cr>
