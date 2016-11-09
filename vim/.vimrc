@@ -42,6 +42,7 @@ call plug#end()
 
 " ================ General Config ====================
 let mapleader = ","
+set ttyfast
 set cursorline
 set title                 " Sets the title at top of tab to be the filename if "titlestring" isn't defined
 set number                " Line numbers on the left hand side
@@ -233,9 +234,10 @@ nmap <leader>gp :Gpush<cr>
 " ================ Syntastic  ===========================
 " show any linting errors immediately
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_w = 1
+let g:syntastic_check_on_w = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_loc_list_height = 4
+nmap <leader>c :SyntasticCheck<cr>
