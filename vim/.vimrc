@@ -19,6 +19,7 @@ Plug 'sjl/gundo.vim'
 Plug 'othree/html5.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
@@ -26,6 +27,8 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'https://github.com/Chun-Yang/vim-action-ag'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -192,6 +195,13 @@ set smartcase       " ...unless we type a capital
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
+cnoreabbrev Ag Ag!
+nnoremap <Leader>a :Ag!<Space>
+
+" use * to search current word in normal mode
+nmap * <Plug>AgActionWord
+" use * to search selected text in visual mode
+vmap * <Plug>AgActionVisual
 
 " ================ Navigation  ===========================
 " "Toggle NERDtree
@@ -222,6 +232,9 @@ noremap <C-h> <C-w>h
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
+" Close current buffer
+nnoremap <Leader>x :bd<CR>
+
 " ================ Fugitive  ===========================
 nmap <leader>g :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
@@ -234,9 +247,9 @@ nmap <leader>gp :Gpush<cr>
 " ================ Syntastic  ===========================
 " show any linting errors immediately
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_w = 0
+let g:syntastic_check_on_w = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_loc_list_height = 4
