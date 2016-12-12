@@ -146,7 +146,7 @@ filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
-au Filetype css setl et ts=4 sw=4
+au Filetype css setl et ts=2 sw=2
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
 
 " Fix indenting for css style things (sass, css)
