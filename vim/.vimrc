@@ -50,7 +50,7 @@ set cursorline
 set title                 " Sets the title at top of tab to be the filename if "titlestring" isn't defined
 set number                " Line numbers on the left hand side
 set visualbell            " That bell is the worst sound. Shut it the fuck off.
-syntax enable             " Sets syntax highlighting on because what is this notepad
+syntax enable             " Sets syntax highlighting on because what is this? notepad?
 set mouse=a
 set encoding=utf-8
 set fileencoding=utf-8
@@ -143,9 +143,10 @@ set undodir=~/.vim/undodir
 let g:polyglot_disabled = ['javascript', 'jsx']
 let g:jsx_ext_required = 0
 filetype plugin indent on
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal sw=2 ts=2 et
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
+au Filetype json setl et ts=2 sw=2
 au Filetype css setl et ts=2 sw=2
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
 
@@ -242,6 +243,8 @@ nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gp :Gpush<cr>
+set diffopt+=vertical " open vimdiff with vertical windows
+
 
 
 " ================ Syntastic  ===========================
