@@ -250,10 +250,12 @@ set diffopt+=vertical " open vimdiff with vertical windows
 " ================ Syntastic  ===========================
 " show any linting errors immediately
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_w = 1
+let g:syntastic_check_on_w = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_loc_list_height = 4
-nmap <leader>c :SyntasticCheck<cr>
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <leader>s :SyntasticToggleMode<CR>
+nnoremap <leader>c :SyntasticCheck<cr>

@@ -22,3 +22,6 @@ alias cp='cp -v'
 #shotcuts
 alias pg='cd ~/code/playground'
 alias amex='cd ~/code/playground/amex'
+
+# added by Anaconda3 4.3.0 installer
+export PATH="/Users/marciopuga/anaconda/bin:$PATH"
