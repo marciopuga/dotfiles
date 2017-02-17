@@ -12,6 +12,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'vim-scripts/BufOnly.vim'
 Plug 'isRuslan/vim-es6'
 Plug 'klen/python-mode'
 Plug 'tpope/vim-fugitive'
@@ -27,8 +28,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
-Plug 'https://github.com/Chun-Yang/vim-action-ag'
+Plug 'mileszs/ack.vim'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -199,11 +199,6 @@ nnoremap <silent> <leader><space> :noh<cr>
 cnoreabbrev Ag Ag!
 nnoremap <Leader>a :Ag!<Space>
 
-" use * to search current word in normal mode
-nmap * <Plug>AgActionWord
-" use * to search selected text in visual mode
-vmap * <Plug>AgActionVisual
-
 " ================ Navigation  ===========================
 " "Toggle NERDtree
 map <C-n> :NERDTreeToggle<CR>
@@ -236,6 +231,10 @@ nnoremap <S-Tab> :bprevious<CR>
 " Close current buffer
 nnoremap <Leader>x :bd<CR>
 
+" Close all buffers but current
+nnoremap <Leader>X :BufOnly<CR>
+
+" ================ Fugitive  ===========================
 " ================ Fugitive  ===========================
 nmap <leader>g :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
@@ -257,5 +256,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_loc_list_height = 4
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <leader>s :SyntasticToggleMode<CR>
-nnoremap <leader>c :SyntasticCheck<cr>
+nnoremap <leader>c :SyntasticToggleMode<CR>
+nnoremap <leader>s :w <CR> :SyntasticCheck<cr>
