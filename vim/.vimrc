@@ -117,7 +117,7 @@ set background=dark
 
 " Go to colorscheme by number
 noremap <leader>1 :colorscheme Monokai<cr>
-noremap <leader>2 :colorscheme Solarized<cr>
+noremap <leader>2 :colorscheme Solarized<cr> :set background=dark<cr>
 noremap <leader>3 :colorscheme Dracula<cr>
 noremap <leader>4 :colorscheme lucid<cr>
 noremap <leader>5 :colorscheme amcolors<cr> :set background=dark<cr>
@@ -243,8 +243,6 @@ nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gp :Gpush<cr>
 set diffopt+=vertical " open vimdiff with vertical windows
-
-
 
 " ================ Syntastic  ===========================
 " show any linting errors immediately
