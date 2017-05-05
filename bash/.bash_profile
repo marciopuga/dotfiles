@@ -22,6 +22,8 @@ alias cp='cp -v'
 #shotcuts
 alias pg='cd ~/code/playground'
 alias amex='cd ~/code/playground/amex'
+alias swarm='export DOCKER_HOST=tcp://127.0.0.1:32769'
+alias local='unset DOCKER_HOST'
 
 # added by Anaconda3 4.3.0 installer
 export PATH="/Users/marciopuga/anaconda/bin:$PATH"
