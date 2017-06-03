@@ -22,8 +22,17 @@ alias cp='cp -v'
 #shotcuts
 alias pg='cd ~/code/playground'
 alias amex='cd ~/code/playground/amex'
-alias swarm='export DOCKER_HOST=tcp://127.0.0.1:32769'
+alias swarm='export DOCKER_HOST=tcp://127.0.0.1:32768'
 alias local='unset DOCKER_HOST'
+alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+
+function swarm-logs() {
+  echo "Getting swarm logs for $1"
+  eval swarm
+  docker logs $(docker ps --filter "name=$1" -q) --follow
+  unset DOCKER_HOST
+}
+
 
 # added by Anaconda3 4.3.0 installer
 export PATH="/Users/marciopuga/anaconda/bin:$PATH"
