@@ -34,8 +34,6 @@ Plug 'mileszs/ack.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'mtglsk/wikipedia.vim'
 Plug 'bcicen/vim-vice'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
 Plug 'danilo-augusto/vim-afterglow'
@@ -43,6 +41,11 @@ Plug 'https://github.com/gko/vim-coloresque'
 Plug 'muellan/am-colors'
 Plug 'dracula/vim'
 call plug#end()
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " ================ General Config ====================
 let mapleader = ","
@@ -112,8 +115,8 @@ if !has("gui_running")
 	let g:solarized_termcolors=256
 endif
 
-colorscheme Solarized
-set background=dark
+colorscheme Monokai
+" set background=dark
 
 " Go to colorscheme by number
 noremap <leader>1 :colorscheme Monokai<cr>
@@ -122,15 +125,6 @@ noremap <leader>3 :colorscheme Dracula<cr>
 noremap <leader>4 :colorscheme lucid<cr>
 noremap <leader>5 :colorscheme amcolors<cr> :set background=dark<cr>
 noremap <leader>6 :colorscheme vice<cr>
-
-" vim-airline
-let g:airline_theme = 'powerlineish'
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline_skip_empty_sections = 1
-
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
