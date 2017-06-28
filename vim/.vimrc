@@ -38,6 +38,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
+Plug 'danilo-augusto/vim-afterglow'
 Plug 'https://github.com/gko/vim-coloresque'
 Plug 'muellan/am-colors'
 Plug 'dracula/vim'
@@ -100,7 +101,6 @@ au InsertLeave * :set relativenumber
 
 
 " ================ Theme  ======================
-set guifont=Inconsolata\ for\ Powerline:h15
 set t_Co=256
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\

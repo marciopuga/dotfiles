@@ -61,6 +61,7 @@ export PATH=$HOME/Library/Python/2.7/bin:$PATH
 # Load default dotfiles
 source ~/.bash_profile
 
+. /Users/marciopuga/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
