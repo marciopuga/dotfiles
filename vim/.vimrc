@@ -28,7 +28,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -36,7 +35,6 @@ Plug 'mtglsk/wikipedia.vim'
 Plug 'bcicen/vim-vice'
 Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
-Plug 'danilo-augusto/vim-afterglow'
 Plug 'https://github.com/gko/vim-coloresque'
 Plug 'muellan/am-colors'
 Plug 'dracula/vim'
@@ -190,8 +188,8 @@ set smartcase       " ...unless we type a capital
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
-cnoreabbrev Ag Ag!
-nnoremap <Leader>a :Ag!<Space>
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 " ================ Navigation  ===========================
 " "Toggle NERDtree
