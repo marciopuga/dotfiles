@@ -1,0 +1,15 @@
+{
+	"segments": {
+		"right": [
+      {
+        "function": "powerline.segments.common.players.spotify",
+        "args": {
+          "format": "♫ {artist} - {title}"
+        }
+      },
+      {
+        "function": "powerline.segments.common.net.hostname"
+      }
+    ]
+  }
+}
