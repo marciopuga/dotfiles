@@ -35,7 +35,6 @@ Plug 'mtglsk/wikipedia.vim'
 Plug 'bcicen/vim-vice'
 Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
-Plug 'https://github.com/gko/vim-coloresque'
 Plug 'muellan/am-colors'
 Plug 'dracula/vim'
 call plug#end()
@@ -50,9 +49,10 @@ let mapleader = ","
 set ttyfast
 set cursorline
 set title                 " Sets the title at top of tab to be the filename if "titlestring" isn't defined
+set showtabline=2
 set number                " Line numbers on the left hand side
 set visualbell            " That bell is the worst sound. Shut it the fuck off.
-syntax enable             " Sets syntax highlighting on because what is this? notepad?
+" syntax enable             " Sets syntax highlighting on because what is this? notepad?
 set mouse=a
 set encoding=utf-8
 set fileencoding=utf-8
@@ -242,9 +242,15 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_w = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_jsx_checkers = ['eslint']
 let g:syntastic_loc_list_height = 4
+
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_enable_balloons = 0
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_echo_current_error = 1
 nnoremap <leader>c :SyntasticToggleMode<CR>
 nnoremap <leader>s :w <CR> :SyntasticCheck<cr>
