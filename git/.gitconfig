@@ -1,0 +1,21 @@
+[core]
+	excludesfile = /Users/marciopuga/.gitignore_global
+[user]
+	name = Marcio Puga
+	email = marciopuga@gmail.com
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+
+[push]
+	default = matching
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+
