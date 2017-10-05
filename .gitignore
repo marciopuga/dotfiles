@@ -2,3 +2,5 @@
 tmux/.tmux/resurrect/
 vim/.vim/undodir/
 vim/.vim/plugged/
+ranger/.config/ranger/bookmarks
+ranger/.config/ranger/history
