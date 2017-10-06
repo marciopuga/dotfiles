@@ -28,6 +28,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -46,6 +47,14 @@ python del powerline_setup
 
 " ================ General Config ====================
 let mapleader = ","
+
+" Always show cursor
+set ruler
+
+" Autoload files that have changed outside of vim
+set autoread
+
+set lazyredraw
 set ttyfast
 set cursorline
 set title                 " Sets the title at top of tab to be the filename if "titlestring" isn't defined
@@ -204,11 +213,14 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)|(\.(swp|tox|ico|git|hg|svn))$'
 let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
 let g:ctrlp_use_caching = 1
+let g:ctrlp_show_hidden=1
 noremap <leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 map <leader>r :CtrlPClearCache<cr>
+" CtrlP -> override <C-o> to provide options for how to open files
+let g:ctrlp_arg_map = 1
 
 "" Switching windows
 noremap <C-j> <C-w>j
@@ -226,7 +238,6 @@ nnoremap <Leader>x :bd<CR>
 " Close all buffers but current
 nnoremap <Leader>X :BufOnly<CR>
 
-" ================ Fugitive  ===========================
 " ================ Fugitive  ===========================
 nmap <leader>g :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
