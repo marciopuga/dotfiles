@@ -4,7 +4,6 @@ source $ZSH/oh-my-zsh.sh
 # Load pure
 autoload -U promptinit; promptinit
 prompt pure
-PURE_PROMPT_SYMBOL=❯
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
