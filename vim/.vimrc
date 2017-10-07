@@ -71,11 +71,10 @@ set nofoldenable          " Don't fold shit because it's the worst.
 set backspace=2
 noremap <silent> <Leader>- :split<CR>
 noremap <silent> <Leader>\ :vsplit<CR>
-" testing the user of semi colon as colon
-nmap ; :
 
 " Escape also mapped to jj
 imap jj <Esc> :w<CR>
+
 set clipboard=unnamed
 
 " Copy/Paste/Cut
@@ -91,8 +90,6 @@ endif
 
 " Turn off Ex mode
 nnoremap Q <nop>
-
-map <Esc><Esc> :w<CR>
 
 " Mappings to move lines
 " http://vim.wikia.com/wiki/Moving_lines_up_or_down
