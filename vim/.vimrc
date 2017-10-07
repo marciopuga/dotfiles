@@ -136,7 +136,6 @@ set hidden
 set undofile
 set undodir=~/.vim/undodir
 
-
 " ================ Indentation ======================
 let g:polyglot_disabled = ['javascript', 'jsx']
 let g:jsx_ext_required = 0
@@ -155,6 +154,7 @@ au BufEnter *.scss set nocindent
 au BufLeave *.scss set cindent
 au BufEnter *.sass set nocindent
 au BufLeave *.sass set cindent
+
 au BufEnter *.less set nocindent
 au BufLeave *.less set cindent
 
@@ -164,9 +164,9 @@ autocmd BufNewFile,BufRead *.less set ft=less.css "Sets filetype of less to be c
 
 " ================ Completion =======================
 set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff,.DS_Store
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS           " Gives css auto completion to files using filetype=css
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType css set omnifunc=csscomplete#CompleteCSS           " Gives css auto completion to files using filetype=css
+" autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " here for UltiSnips and YCM
 let g:ycm_use_ultisnips_completer = 1
@@ -194,12 +194,13 @@ set smartcase       " ...unless we type a capital
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>s :w<CR>
 
 " ================ Navigation  ===========================
-" "Toggle NERDtree
+" Toggle NERDtree
 map <C-n> :NERDTreeToggle<CR>
+" Show hidden files by default
+let NERDTreeShowHidden=1
 
 " Open VIMRC
 nnoremap <leader>v :e $MYVIMRC<CR>
@@ -260,5 +261,5 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 let g:syntastic_enable_balloons = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_echo_current_error = 1
-nnoremap <leader>c :SyntasticToggleMode<CR>
-nnoremap <leader>s :w <CR> :SyntasticCheck<cr>
+nnoremap <leader>C :SyntasticToggleMode<CR>
+nnoremap <leader>c :SyntasticCheck<cr>
