@@ -1,8 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/marciopuga/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 # Load pure
 autoload -U promptinit; promptinit
 prompt pure
+PURE_PROMPT_SYMBOL=❯
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -58,7 +60,6 @@ plugins=(git)
 export PATH="/usr/local/heroku/bin:/Users/marciopuga/google-cloud-sdk/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marciopuga/Dev/android/sdk/platform-tools/:/Users/marciopuga/Dev/android/sdk/tools/:/Users/marciopuga/Dev/gsutil"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
 # Load default dotfiles
 source ~/.bash_profile
