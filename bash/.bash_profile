@@ -2,6 +2,8 @@ export PATH=$PATH:~/Dev/android/sdk/platform-tools/:~/Dev/android/sdk/tools/
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
 export PATH=${PATH}:$HOME/Dev/gsutil
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin
 
 #shotcuts
 alias pg='cd ~/code/playground'
@@ -23,7 +25,7 @@ function district9-swarm() {
 }
 
 function carrots-swarm() {
-  echo "Switching swarm to connect to carrots"
+ echo "Switching swarm to connect to carrots"
   docker container stop $(docker ps --filter "name=client_proxy" -q)
   docker system prune
   docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST dockercloud/client carrotsmoney/cloud

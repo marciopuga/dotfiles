@@ -29,6 +29,7 @@ Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'fatih/vim-go'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
