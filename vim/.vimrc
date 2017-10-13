@@ -75,6 +75,7 @@ noremap <silent> <Leader>\ :vsplit<CR>
 
 " Escape also mapped to jj
 imap jj <Esc> :w<CR>
+map <Esc> <Esc>:w<CR>
 
 set clipboard=unnamed
 
