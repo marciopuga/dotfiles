@@ -58,7 +58,7 @@ set autoread
 set lazyredraw
 set ttyfast
 set cursorline
-set title                 " Sets the title at top of tab to be the filename if "titlestring" isn't defined
+set title                 " Sets the title at top of tab to be the filename iftitlestring" isn't defined
 set showtabline=2
 set number                " Line numbers on the left hand side
 set visualbell            " That bell is the worst sound. Shut it the fuck off.
@@ -75,7 +75,7 @@ noremap <silent> <Leader>\ :vsplit<CR>
 
 " Escape also mapped to jj
 imap jj <Esc> :w<CR>
-map <Esc> <Esc>:w<CR>
+map <Esc><Esc> :w<CR>
 
 set clipboard=unnamed
 
