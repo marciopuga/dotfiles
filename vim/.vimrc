@@ -264,4 +264,4 @@ let g:syntastic_enable_balloons = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_echo_current_error = 1
 nnoremap <leader>C :SyntasticToggleMode<CR>
-nnoremap <leader>c :SyntasticCheck<cr>
+nnoremap <leader>s :SyntasticCheck<cr>
