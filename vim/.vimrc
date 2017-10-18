@@ -19,8 +19,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
 Plug 'othree/html5.vim'
 Plug 'sheerun/vim-polyglot'
-" Plug 'scrooloose/syntastic'
-" Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
@@ -30,7 +28,6 @@ Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 
 " Themes
