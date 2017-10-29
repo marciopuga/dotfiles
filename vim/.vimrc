@@ -215,7 +215,7 @@ let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore
 let g:ctrlp_use_caching = 1
 let g:ctrlp_show_hidden=1
 noremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_map = '<leader>t'
+let g:ctrlp_map = '<C-f>'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 map <leader>r :CtrlPClearCache<cr>
