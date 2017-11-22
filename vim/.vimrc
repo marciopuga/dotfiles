@@ -101,10 +101,6 @@ nnoremap ˚ :m .-2<CR>== "Alt + k
 vnoremap ˚ :m '<-2<CR>gv=gv
 vnoremap ∆ :m '>+1<CR>gv=gv
 
-" Jump further with shift JK
-nnoremap J }
-nnoremap K {
-
 " Enter newlines without entering insert mode
 " http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
 nnoremap <CR> o<Esc>k
