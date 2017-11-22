@@ -1,4 +1,5 @@
 export PATH=$PATH:~/Dev/android/sdk/platform-tools/:~/Dev/android/sdk/tools/
+export PATH="/usr/lib/google-cloud-sdk/bin:$PATH"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
 export PATH=${PATH}:$HOME/Dev/gsutil
