@@ -1,5 +1,6 @@
 [core]
 	excludesfile = /Users/marciopuga/.gitignore_global
+	editor = vim
 [user]
 	name = Marcio Puga
 	email = marciopuga@gmail.com
