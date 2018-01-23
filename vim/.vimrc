@@ -5,7 +5,6 @@ filetype off
 "" Plug install packages
 "*****************************************************************************
 call plug#begin('~/.vim/plugged')
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
@@ -48,7 +47,6 @@ python del powerline_setup
 
 " ================ General Config ====================
 let mapleader = ","
-set backupcopy=yes
 
 " Always show cursor
 set ruler
@@ -136,6 +134,8 @@ noremap <leader>6 :colorscheme vice<cr>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
+set nobackup
+set nowritebackup
 set hidden
 set undofile
 set undodir=~/.vim/undodir

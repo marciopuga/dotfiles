@@ -1,4 +1,6 @@
-export PATH=$PATH:~/Dev/android/sdk/platform-tools/:~/Dev/android/sdk/tools/
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/usr/lib/google-cloud-sdk/bin:$PATH"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
