@@ -10,6 +10,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 #shotcuts
 alias pg='cd ~/Code/playground'
+alias tac='cd ~/Code/github/grumpysailor/tac'
 alias deus='ssh deus'
 alias dkrmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
 

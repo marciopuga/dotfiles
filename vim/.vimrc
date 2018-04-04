@@ -134,7 +134,7 @@ noremap <leader>6 :colorscheme vice<cr>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
-set nobackup
+set backupcopy=yes
 set nowritebackup
 set hidden
 set undofile
