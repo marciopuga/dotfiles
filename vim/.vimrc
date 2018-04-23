@@ -203,6 +203,7 @@ nnoremap <Leader>s :w<CR>
 " ================ Navigation  ===========================
 " Toggle NERDtree
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
 " Show hidden files by default
 let NERDTreeShowHidden=1
 
@@ -249,7 +250,7 @@ nmap <leader>gd :Gdiff<cr>
 nmap <leader>gp :Gpush<cr>
 set diffopt+=vertical " open vimdiff with vertical windows
 
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+let g:ale_linters = {'js': ['eslint']}
 let g:ale_linter_aliases = {'jsx': 'css'}
 " Put this in vimrc or a plugin file of your own.
 " After this is configured, :ALEFix will try and fix your JS code with ESLint.
