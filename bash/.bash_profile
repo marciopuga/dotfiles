@@ -14,6 +14,8 @@ alias tac='cd ~/Code/github/grumpysailor/tac'
 alias deus='ssh deus'
 alias dkrmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
 
+alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
+
 function swarm-logs() {
   echo "Getting swarm logs for $1"
   docker logs $(docker ps --filter "name=$1" -q) --follow

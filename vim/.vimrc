@@ -115,11 +115,9 @@ set fillchars+=stl:\ ,stlnc:\
 set term=screen-256color
 set termencoding=utf-l8
 
-if !has("gui_running")
-	let g:solarized_termtrans=1
-	let g:solarized_termcolors=256
-	set guifont=Roboto\ Mono\ for\ Powerline\ 11
-endif
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+set guifont=Roboto\ Mono\ for\ Powerline\ 11
 
 colorscheme Monokai
 " set background=dark
