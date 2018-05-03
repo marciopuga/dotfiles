@@ -1,5 +1,6 @@
 .DS_Store
 tmux/.tmux/resurrect/
+.tmux/plugins
 vim/.vim/undodir/
 vim/.vim/plugged/
 ranger/.config/ranger/bookmarks
