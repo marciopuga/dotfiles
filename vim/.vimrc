@@ -29,6 +29,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
+Plug 'terryma/vim-multiple-cursors'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -38,6 +39,7 @@ Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
 Plug 'muellan/am-colors'
 Plug 'dracula/vim'
+Plug 'TroyFletcher/vim-colors-synthwave'
 call plug#end()
 
 " Powerline
@@ -129,6 +131,8 @@ noremap <leader>3 :colorscheme Dracula<cr>
 noremap <leader>4 :colorscheme lucid<cr>
 noremap <leader>5 :colorscheme amcolors<cr> :set background=dark<cr>
 noremap <leader>6 :colorscheme vice<cr>
+noremap <leader>7 :colorscheme wikipedia<cr>
+noremap <leader>8 :colorscheme synthwave<cr>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
@@ -267,3 +271,14 @@ let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
 let g:ale_enabled = 1
 nmap <leader>c :ALEToggle<cr>
+
+" Multiple cursors
+let g:multi_cursor_use_default_mapping=0
+
+let g:multi_cursor_start_word_key      = '<C-m>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_next_key            = '<C-m>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
