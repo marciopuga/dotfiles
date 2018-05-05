@@ -48,7 +48,9 @@ python powerline_setup()
 python del powerline_setup
 
 " ================ General Config ====================
-let mapleader = ","
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+map <leader>= mzgg=G`z
 
 " Always show cursor
 set ruler
