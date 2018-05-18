@@ -30,6 +30,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -121,7 +123,7 @@ set termencoding=utf-l8
 
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-set guifont=Roboto\ Mono\ for\ Powerline\ 11
+set guifont=Roboto\ Mono\ for\ Powerline\ 14
 
 colorscheme Monokai
 " set background=dark

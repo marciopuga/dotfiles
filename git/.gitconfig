@@ -20,3 +20,5 @@
 [merge]
 	tool = vimdiff
 
+[github]
+	user = marciopuga
