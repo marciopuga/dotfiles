@@ -89,6 +89,9 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
+" Copy entire buffer to
+noremap <silent> <Leader>y :%y<CR>
+
 if has('macunix')
   " pbcopy for OSX copy/paste
   vmap <C-x> :!pbcopy<CR>
