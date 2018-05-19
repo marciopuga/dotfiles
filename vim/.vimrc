@@ -45,9 +45,9 @@ Plug 'TroyFletcher/vim-colors-synthwave'
 call plug#end()
 
 " Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 " ================ General Config ====================
 nnoremap <SPACE> <Nop>
@@ -122,7 +122,7 @@ set t_Co=256
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 set term=screen-256color
-set termencoding=utf-l8
+set termencoding=utf-8
 
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
