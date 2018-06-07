@@ -159,6 +159,7 @@ au Filetype javascript setl et ts=2 sw=2
 au Filetype json setl et ts=2 sw=2
 au Filetype css setl et ts=2 sw=2
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
+let g:markdown_folding=0
 
 " Fix indenting for css style things (sass, css)
 au BufEnter *.css set nocindent
