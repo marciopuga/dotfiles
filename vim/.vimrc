@@ -75,6 +75,8 @@ set fileencodings=utf-8
 set history=5112          " Default is 20, I'd rather set this to infinity
 set nofoldenable          " Don't fold shit because it's the worst.
 set backspace=2
+set expandtab
+set tabstop=2
 noremap <silent> <Leader>- :split<CR>
 noremap <silent> <Leader>\ :vsplit<CR>
 
@@ -153,6 +155,7 @@ set undodir=~/.vim/undodir
 let g:polyglot_disabled = ['javascript', 'jsx']
 let g:jsx_ext_required = 0
 filetype plugin indent on
+autocmd FileType * setlocal sw=2 ts=2 et
 autocmd FileType html setlocal sw=2 ts=2 et
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
