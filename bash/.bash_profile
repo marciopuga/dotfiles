@@ -22,3 +22,9 @@ function swarm-logs() {
   docker logs $(docker ps --filter "name=$1" -q) --follow
   unset DOCKER_HOST
 }
+
+function kill-port() {
+  echo "Killing processes on port $1"
+  lsof -i TCP:$1 | awk 'NR > 1 {print $2}'  | xargs kill -9
+}
+
