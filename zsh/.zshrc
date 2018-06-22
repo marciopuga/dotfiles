@@ -98,3 +98,7 @@ if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then source '/Users
 if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
