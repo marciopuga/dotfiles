@@ -1,9 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/marciopuga/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-# Load pure
-autoload -U promptinit; promptinit
-prompt pure
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -96,6 +94,10 @@ if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then source '/Users
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
