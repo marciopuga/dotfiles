@@ -15,6 +15,8 @@ alias deus='ssh deus'
 alias tmuxa='tmux a -t'
 
 alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
 
 function swarm-logs() {
   echo "Getting swarm logs for $1"
