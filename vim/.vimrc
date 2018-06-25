@@ -32,6 +32,7 @@ Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'stephpy/vim-yaml'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
