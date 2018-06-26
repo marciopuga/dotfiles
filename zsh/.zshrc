@@ -1,3 +1,5 @@
+# For oh-my-zsh users with vi-mode plugin enabled
+export RPS1="%{$reset_color%}"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/marciopuga/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -8,6 +10,9 @@ source $ZSH/oh-my-zsh.sh
 # time that oh-my-zsh is loaded.
 ZSH_THEME=""
 DEFAULT_USER="marcipuga"
+SPACESHIP_VI_MODE_INSERT="[INSERT]"
+SPACESHIP_VI_MODE_NORMAL="[NORMAL]"
+SPACESHIP_VI_MODE_SHOW="true"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -66,16 +71,6 @@ bindkey -v
 # 10ms for key sequences
 KEYTIMEOUT=1
 
-# show vim status
-# http://zshwiki.org/home/examples/zlewidgets
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-
 # add missing vim hotkeys
 # http://zshwiki.org/home/zle/vi-mode
 bindkey -a u undo
@@ -123,3 +118,4 @@ fi
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+spaceship_vi_mode_enable
