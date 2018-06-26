@@ -82,6 +82,9 @@ bindkey '^?' backward-delete-char  #backspace
 # ctrl+r to search history
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
+# `v` is already mapped to visual mode, so we need to use a different key to
+# open Vim
+bindkey -M vicmd "^V" edit-command-line
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
