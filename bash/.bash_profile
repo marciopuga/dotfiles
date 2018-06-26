@@ -1,12 +1,7 @@
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH="/usr/lib/google-cloud-sdk/bin:$PATH"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
-export PATH=${PATH}:$HOME/Dev/gsutil
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:/usr/local/go/bin
+export PATH="/usr/local/heroku/bin:/Users/marciopuga/google-cloud-sdk/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marciopuga/Dev/android/sdk/platform-tools/:/Users/marciopuga/Dev/android/sdk/tools/:/Users/marciopuga/Dev/gsutil"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 #shotcuts
 alias pg='cd ~/Code/playground'

@@ -52,25 +52,48 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
-
-export PATH="/usr/local/heroku/bin:/Users/marciopuga/google-cloud-sdk/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marciopuga/Dev/android/sdk/platform-tools/:/Users/marciopuga/Dev/android/sdk/tools/:/Users/marciopuga/Dev/gsutil"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-export PATH=$HOME/Library/Python/2.7/bin:$PATH
 # Load default dotfiles
 source ~/.bash_profile
 
-# . /Users/marciopuga/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
+
+bindkey -v
+
+# no delay entering normal mode
+# https://coderwall.com/p/h63etq
+# https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
+# 10ms for key sequences
+KEYTIMEOUT=1
+
+# show vim status
+# http://zshwiki.org/home/examples/zlewidgets
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# add missing vim hotkeys
+# http://zshwiki.org/home/zle/vi-mode
+bindkey -a u undo
+bindkey -a '^T' redo
+bindkey '^?' backward-delete-char  #backspace
+
+# history search in vim mode
+# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
+# ctrl+r to search history
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -89,9 +112,6 @@ source ~/.bash_profile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/marciopuga/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
 
@@ -99,7 +119,6 @@ if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
