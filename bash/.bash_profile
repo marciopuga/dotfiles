@@ -19,7 +19,7 @@ function swarm-logs() {
   unset DOCKER_HOST
 }
 
-function kill-port() {
+function killport() {
   echo "Killing processes on port $1"
   lsof -i TCP:$1 | awk 'NR > 1 {print $2}'  | xargs kill -9
 }
