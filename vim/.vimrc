@@ -260,7 +260,7 @@ nmap <leader>g :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
-nmap <leader>gd :Gdiff<cr>
+nmap <leader>gb :!git open<cr>
 nmap <leader>gp :Gpush<cr>
 set diffopt+=vertical " open vimdiff with vertical windows
 let g:gitgutter_highlight_lines = 1
