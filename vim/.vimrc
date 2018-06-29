@@ -263,7 +263,6 @@ nmap <leader>gl :Glog<cr>
 nmap <leader>gb :!git open<cr>
 nmap <leader>gp :Gpush<cr>
 set diffopt+=vertical " open vimdiff with vertical windows
-let g:gitgutter_highlight_lines = 1
 
 let g:ale_linters = {'js': ['eslint']}
 let g:ale_linter_aliases = {'jsx': 'css'}
