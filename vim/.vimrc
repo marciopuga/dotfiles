@@ -33,6 +33,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'stephpy/vim-yaml'
+Plug 'elzr/vim-json'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -228,7 +229,7 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)|(\.(swp|tox|ico|git|hg|svn))$'
-let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_use_caching = 1
 let g:ctrlp_show_hidden=1
 noremap <leader>b :CtrlPBuffer<CR>
