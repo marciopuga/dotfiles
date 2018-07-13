@@ -1,8 +1,5 @@
 # For oh-my-zsh users with vi-mode plugin enabled
 export RPS1="%{$reset_color%}"
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/marciopuga/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -55,7 +52,11 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  docker
+  web-search
+)
 
 # Load default dotfiles
 source ~/.bash_profile
@@ -107,6 +108,10 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/marciopuga/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
