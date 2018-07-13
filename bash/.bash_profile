@@ -13,12 +13,6 @@ alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
 export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/vim
 
-function swarm-logs() {
-  echo "Getting swarm logs for $1"
-  docker logs $(docker ps --filter "name=$1" -q) --follow
-  unset DOCKER_HOST
-}
-
 function killport() {
   echo "Killing processes on port $1"
   lsof -i TCP:$1 | awk 'NR > 1 {print $2}'  | xargs kill -9
