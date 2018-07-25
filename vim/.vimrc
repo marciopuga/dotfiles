@@ -8,13 +8,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'isRuslan/vim-es6'
 Plug 'klen/python-mode'
-Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
 Plug 'othree/html5.vim'
 Plug 'sheerun/vim-polyglot'
@@ -257,7 +258,7 @@ nnoremap <Leader>x :bd<CR>
 nnoremap <Leader>X :BufOnly<CR>
 
 " ================ Fugitive  ===========================
-nmap <leader>g :Gstatus<cr>
+nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
