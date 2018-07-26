@@ -10,6 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
@@ -46,11 +47,6 @@ Plug 'muellan/am-colors'
 Plug 'dracula/vim'
 Plug 'TroyFletcher/vim-colors-synthwave'
 call plug#end()
-
-" Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
 
 " ================ General Config ====================
 nnoremap <SPACE> <Nop>
