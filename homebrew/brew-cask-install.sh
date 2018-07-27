@@ -12,5 +12,6 @@ brew cask install sketch
 brew cask install spotify
 brew cask install dropbox
 brew cask install paw
+brew cask install slack
 
 echo " Successfully installed all brew cask apps.\n"
