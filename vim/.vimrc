@@ -262,7 +262,7 @@ nmap <leader>gb :!git open<cr>
 nmap <leader>gp :Gpush<cr>
 set diffopt+=vertical " open vimdiff with vertical windows
 
-let g:ale_linters = {'js': ['standard']}
+let g:ale_linters = {'javascript': ['standard']}
 let g:ale_linter_aliases = {'jsx': 'css'}
 " Put this in vimrc or a plugin file of your own.
 " After this is configured, :ALEFix will try and fix your JS code with ESLint.
