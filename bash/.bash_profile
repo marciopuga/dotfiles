@@ -3,6 +3,7 @@ export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbi
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 #shotcuts
+alias cl='clear'
 alias pg='cd ~/Code/playground'
 alias tac='cd ~/Code/github/grumpysailor/tac'
 alias deus='ssh deus'
