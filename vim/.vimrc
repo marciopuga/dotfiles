@@ -1,6 +1,5 @@
 set nocompatible
 filetype off
-
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
@@ -36,7 +35,6 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
-
 " Themes
 Plug 'flazz/vim-colorschemes'
 Plug 'mtglsk/wikipedia.vim'
