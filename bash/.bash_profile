@@ -9,6 +9,8 @@ alias tac='cd ~/Code/github/grumpysailor/tac'
 alias deus='ssh deus'
 alias tmuxa='tmux a -t'
 alias lg='lazygit'
+alias v='vim'
+alias k='kubectl'
 
 alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
 export EDITOR=/usr/local/bin/vim
