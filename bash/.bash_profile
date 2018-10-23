@@ -5,6 +5,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #shotcuts
 alias cl='clear'
 alias pg='cd ~/Code/playground'
+alias code='cd ~/Code/'
 alias tac='cd ~/Code/github/grumpysailor/tac'
 alias deus='ssh deus'
 alias tmuxa='tmux a -t'
