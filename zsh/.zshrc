@@ -94,7 +94,9 @@ else
   export EDITOR='mvim'
 fi
 
+# Make shift+tab work to reverse
 bindkey '^[[Z' reverse-menu-complete
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
