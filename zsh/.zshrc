@@ -94,6 +94,7 @@ else
   export EDITOR='mvim'
 fi
 
+bindkey '^[[Z' reverse-menu-complete
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
