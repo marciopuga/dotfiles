@@ -115,9 +115,6 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
-
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
@@ -126,3 +123,9 @@ fi
 autoload -U promptinit; promptinit
 prompt spaceship
 spaceship_vi_mode_enable
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
