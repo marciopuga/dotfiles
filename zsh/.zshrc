@@ -10,6 +10,10 @@ DEFAULT_USER="marcipuga"
 SPACESHIP_VI_MODE_INSERT="[INSERT]"
 SPACESHIP_VI_MODE_NORMAL="[NORMAL]"
 SPACESHIP_VI_MODE_SHOW="true"
+SPACESHIP_DOCKER_SHOW="false"
+SPACESHIP_KUBECONTEXT_SHOW="false"
+SPACESHIP_NODE_SHOW="false"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
