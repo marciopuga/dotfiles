@@ -132,7 +132,7 @@ prompt spaceship
 spaceship_vi_mode_enable
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/marciopuga/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/marciopuga/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marciopuga/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

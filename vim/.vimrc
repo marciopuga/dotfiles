@@ -41,9 +41,9 @@ Plug 'mtglsk/wikipedia.vim'
 Plug 'bcicen/vim-vice'
 Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
-Plug 'muellan/am-colors'
 Plug 'dracula/vim'
 Plug 'TroyFletcher/vim-colors-synthwave'
+Plug 'gkjgh/cobalt'
 call plug#end()
 
 " ================ General Config ====================
@@ -135,10 +135,10 @@ noremap <leader>1 :colorscheme Monokai<cr>
 noremap <leader>2 :colorscheme Solarized<cr> :set background=dark<cr>
 noremap <leader>3 :colorscheme Dracula<cr>
 noremap <leader>4 :colorscheme lucid<cr>
-noremap <leader>5 :colorscheme amcolors<cr> :set background=dark<cr>
-noremap <leader>6 :colorscheme vice<cr>
-noremap <leader>7 :colorscheme wikipedia<cr>
-noremap <leader>8 :colorscheme synthwave<cr>
+noremap <leader>5 :colorscheme vice<cr>
+noremap <leader>6 :colorscheme wikipedia<cr>
+noremap <leader>7 :colorscheme synthwave<cr>
+noremap <leader>8 :colorscheme random<cr>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
