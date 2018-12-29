@@ -71,6 +71,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set history=5112          " Default is 20, I'd rather set this to infinity
 set nofoldenable          " Don't fold shit because it's the worst.
+set conceallevel=2
 set backspace=2
 set expandtab
 set tabstop=2
@@ -159,7 +160,6 @@ au Filetype javascript setl et ts=2 sw=2
 au Filetype json setl et ts=2 sw=2
 au Filetype css setl et ts=2 sw=2
 autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
-let g:markdown_folding=0
 
 " Fix indenting for css style things (sass, css)
 au BufEnter *.css set nocindent
