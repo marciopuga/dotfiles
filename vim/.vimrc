@@ -11,14 +11,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/BufOnly.vim'
-Plug 'isRuslan/vim-es6'
-Plug 'klen/python-mode'
-Plug 'sjl/gundo.vim'
 Plug 'othree/html5.vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
@@ -28,11 +22,8 @@ Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'mattn/gist-vim'
-Plug 'mattn/webapi-vim'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
 " Themes
@@ -105,8 +96,6 @@ nnoremap Q <nop>
 " http://vim.wikia.com/wiki/Moving_lines_up_or_down
 nnoremap ∆ :m .+1<CR>== " Alt + j
 nnoremap ˚ :m .-2<CR>== "Alt + k
-vnoremap ˚ :m '<-2<CR>gv=gv
-vnoremap ∆ :m '>+1<CR>gv=gv
 
 " Enter newlines without entering insert mode
 " http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
@@ -154,7 +143,7 @@ let g:polyglot_disabled = ['javascript', 'jsx']
 let g:jsx_ext_required = 0
 filetype plugin indent on
 autocmd FileType * setlocal sw=2 ts=2 et
-autocmd FileType html setlocal sw=2 ts=2 et
+" autocmd FileType html setlocal sw=2 ts=2 et
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
 au Filetype json setl et ts=2 sw=2
@@ -183,14 +172,14 @@ set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff,.DS_Store
 " autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " here for UltiSnips and YCM
-let g:ycm_use_ultisnips_completer = 1
+" let g:ycm_use_ultisnips_completer = 1
 let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<s-Tab>', '<Up>']
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsListSnippets="<c-h>"
+" let g:UltiSnipsListSnippets="<c-h>"
 
 " DelimitMate
 let delimitMate_expand_cr = 2
@@ -277,6 +266,7 @@ let g:ale_completion_enabled = 1
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_enabled = 1
 nmap <leader>c :ALEToggle<cr>
 
