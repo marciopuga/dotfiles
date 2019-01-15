@@ -62,7 +62,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set history=5112          " Default is 20, I'd rather set this to infinity
 set nofoldenable          " Don't fold shit because it's the worst.
-set conceallevel=2
+set conceallevel=0
 set backspace=2
 set expandtab
 set tabstop=2
