@@ -11,12 +11,14 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'othree/html5.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
+Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -140,7 +142,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 " ================ Indentation ======================
-let g:polyglot_disabled = ['javascript', 'jsx']
+" let g:polyglot_disabled = ['javascript', 'jsx']
 let g:jsx_ext_required = 0
 filetype plugin indent on
 autocmd FileType * setlocal sw=2 ts=2 et
@@ -167,12 +169,9 @@ autocmd BufNewFile,BufRead *.less set ft=less.css "Sets filetype of less to be c
 
 
 " ================ Completion =======================
-set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff,.DS_Store
-" autocmd FileType css set omnifunc=csscomplete#CompleteCSS           " Gives css auto completion to files using filetype=css
-" autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " here for UltiSnips and YCM
+let g:ycm_filepath_blacklist = {}
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<s-Tab>', '<Up>']
@@ -211,8 +210,11 @@ let NERDTreeShowHidden=1
 nnoremap <leader>v :e $MYVIMRC<CR>
 
 "" ctrlp.vim
+set wildmenu
 set wildmode=list:longest,list:full
+set wildignore=node_modules/*,jspm_packages/*,.DS_Store
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)|(\.(swp|tox|ico|git|hg|svn))$'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_use_caching = 1
@@ -266,7 +268,7 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
+let g:ale_open_list = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_enabled = 1
 nmap <leader>c :ALEToggle<cr>
