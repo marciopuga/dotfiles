@@ -17,7 +17,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
-Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -174,7 +173,7 @@ set wildignore=node_modules/*,jspm_packages/*,*.jpg,*.png,*.gif,*.woff,.DS_Store
 " autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " here for UltiSnips and YCM
-" let g:ycm_use_ultisnips_completer = 1
+let g:ycm_use_ultisnips_completer = 1
 let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<s-Tab>', '<Up>']
 let g:ycm_autoclose_preview_window_after_insertion = 1
