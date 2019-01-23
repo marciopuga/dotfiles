@@ -28,6 +28,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
+Plug 'cristianoliveira/vim-react-html-snippets'
+Plug 'mattn/emmet-vim'
 " Themes
 Plug 'flazz/vim-colorschemes'
 Plug 'mtglsk/wikipedia.vim'
@@ -282,3 +284,6 @@ let g:multi_cursor_next_key            = '<C-m>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+"EMMET CONFIG
+let g:user_emmet_leader_key=','
