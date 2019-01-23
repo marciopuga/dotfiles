@@ -26,6 +26,7 @@ Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
+Plug 'mxw/vim-jsx'
 " Themes
 Plug 'flazz/vim-colorschemes'
 Plug 'mtglsk/wikipedia.vim'
