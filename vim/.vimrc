@@ -27,9 +27,12 @@ Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'stephpy/vim-yaml'
 Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'cristianoliveira/vim-react-html-snippets'
 Plug 'mattn/emmet-vim'
+Plug 'sheerun/vim-polyglot'
+
 " Themes
 Plug 'flazz/vim-colorschemes'
 Plug 'mtglsk/wikipedia.vim'
@@ -144,9 +147,8 @@ set undofile
 set undodir=~/.vim/undodir
 
 " ================ Indentation ======================
-" let g:polyglot_disabled = ['javascript', 'jsx']
-let g:jsx_ext_required = 0
 filetype plugin indent on
+let g:polyglot_disabled = ['javascript', 'jsx']
 autocmd FileType * setlocal sw=2 ts=2 et
 " autocmd FileType html setlocal sw=2 ts=2 et
 au Filetype python setl et ts=4 sw=4
