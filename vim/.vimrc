@@ -11,7 +11,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'othree/html5.vim'
 Plug 'Raimondi/delimitMate'
@@ -69,7 +68,9 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set history=5112          " Default is 20, I'd rather set this to infinity
 set nofoldenable          " Don't fold shit because it's the worst.
-set conceallevel=0
+let g:markdown_folding = 0
+let g:markdown_enable_folding = 0
+let g:markdown_syntax_conceal = 0
 let g:vim_json_syntax_conceal = 0
 set backspace=2
 set expandtab
@@ -148,8 +149,10 @@ set undodir=~/.vim/undodir
 
 " ================ Indentation ======================
 filetype plugin indent on
+let g:indentLine_setConceal = 0
 let g:polyglot_disabled = ['javascript', 'jsx']
 autocmd FileType * setlocal sw=2 ts=2 et
+autocmd FileType markdown set conceallevel=0
 " autocmd FileType html setlocal sw=2 ts=2 et
 au Filetype python setl et ts=4 sw=4
 au Filetype javascript setl et ts=2 sw=2
@@ -289,3 +292,4 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 "EMMET CONFIG
 let g:user_emmet_leader_key=','
+set conceallevel=0
