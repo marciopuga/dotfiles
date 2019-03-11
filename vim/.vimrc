@@ -82,12 +82,7 @@ noremap <silent> <Leader>\ :vsplit<CR>
 imap jj <Esc> :w<CR>
 map <Esc><Esc> :w<CR>
 
-set clipboard=unnamed
-
-" Copy/Paste/Cut
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-endif
+set clipboard=unnamedplus
 
 " Copy entire buffer to
 noremap <silent> <Leader>y :%y<CR>
