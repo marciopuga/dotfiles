@@ -82,7 +82,12 @@ noremap <silent> <Leader>\ :vsplit<CR>
 imap jj <Esc> :w<CR>
 map <Esc><Esc> :w<CR>
 
-set clipboard=unnamedplus
+set clipboard=unnamed
+
+" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
 
 " Copy entire buffer to
 noremap <silent> <Leader>y :%y<CR>
@@ -144,7 +149,7 @@ set undodir=~/.vim/undodir
 
 " ================ Indentation ======================
 filetype plugin indent on
-let g:indentLine_setConceal = 0
+" let g:indentLine_setConceal = 0
 let g:polyglot_disabled = ['javascript', 'jsx']
 autocmd FileType * setlocal sw=2 ts=2 et
 autocmd FileType markdown set conceallevel=0
