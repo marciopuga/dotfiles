@@ -17,6 +17,7 @@ alias tmuxa='tmux a -t'
 alias lg='lazygit'
 alias v='vim'
 alias k='kubectl'
+alias serve='http-server'
 
 alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
 export EDITOR=/usr/local/bin/vim
