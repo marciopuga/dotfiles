@@ -20,6 +20,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
@@ -148,6 +149,9 @@ set undofile
 set undodir=~/.vim/undodir
 
 " ================ Indentation ======================
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 filetype plugin indent on
 " let g:indentLine_setConceal = 0
 let g:polyglot_disabled = ['javascript', 'jsx']

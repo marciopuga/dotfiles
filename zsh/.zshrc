@@ -131,12 +131,6 @@ autoload -U promptinit; promptinit
 prompt spaceship
 spaceship_vi_mode_enable
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/marciopuga/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/marciopuga/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marciopuga/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
@@ -146,3 +140,8 @@ if [ -f '/Users/marciopuga/Downloads/google-cloud-sdk/completion.zsh.inc' ]; the
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
