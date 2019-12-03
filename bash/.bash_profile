@@ -1,17 +1,15 @@
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
-export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.npm-global/bin:$PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
 
 #shotcuts
 alias cl='clear'
-alias pg='cd ~/Code/playground'
-alias code='cd ~/Code/'
+alias pg='cd ~/code/playground'
+alias code='cd ~/code/'
 alias dot='cd ~/dotfiles/'
-alias tepapa='cd ~/Code/github/grumpysailor/te-papa'
-alias gs='cd ~/Code/github/grumpysailor'
-alias temp='cd ~/Code/temp'
-alias tac='cd ~/Code/github/grumpysailor/tac'
+alias temp='cd ~/code/temp'
+alias tac='cd ~/code/github/grumpysailor/tac'
 alias deus='ssh deus'
 alias tmuxa='tmux a -t'
 alias lg='lazygit'
