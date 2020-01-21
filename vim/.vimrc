@@ -127,7 +127,7 @@ colorscheme molokai
 " set background=dark
 
 " Go to colorscheme by number
-noremap <leader>1 :colorscheme Monokai<cr>
+noremap <leader>1 :colorscheme molokai<cr>
 noremap <leader>2 :colorscheme Solarized<cr> :set background=dark<cr>
 noremap <leader>3 :colorscheme Dracula<cr>
 noremap <leader>4 :colorscheme lucid<cr>
