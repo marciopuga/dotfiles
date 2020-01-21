@@ -135,6 +135,7 @@ noremap <leader>5 :colorscheme vice<cr>
 noremap <leader>6 :colorscheme wikipedia<cr>
 noremap <leader>7 :colorscheme synthwave<cr>
 noremap <leader>8 :colorscheme random<cr>
+noremap <leader>9 :colorscheme minimalist<cr>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
