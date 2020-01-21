@@ -61,7 +61,7 @@ set cursorline
 set title                 " Sets the title at top of tab to be the filename iftitlestring" isn't defined
 set showtabline=2
 set number                " Line numbers on the left hand side
-set visualbell            " That bell is the worst sound. Shut it the fuck off.
+" set visualbell            " That bell is the worst sound. Shut it the fuck off.
 " syntax enable             " Sets syntax highlighting on because what is this? notepad?
 set mouse=a
 set encoding=utf-8
@@ -83,12 +83,8 @@ noremap <silent> <Leader>\ :vsplit<CR>
 imap jj <Esc> :w<CR>
 map <Esc><Esc> :w<CR>
 
-set clipboard=unnamed
 
-" Copy/Paste/Cut
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-endif
+set clipboard=unnamedplus
 
 " Copy entire buffer to
 noremap <silent> <Leader>y :%y<CR>
@@ -127,7 +123,7 @@ let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 set guifont=Roboto\ Mono\ for\ Powerline\ 14
 
-colorscheme Monokai
+colorscheme molokai
 " set background=dark
 
 " Go to colorscheme by number
