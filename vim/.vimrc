@@ -32,6 +32,7 @@ Plug 'mxw/vim-jsx'
 Plug 'cristianoliveira/vim-react-html-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'evanleck/vim-svelte'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -208,12 +209,12 @@ set smartcase       " ...unless we type a capital
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
-nnoremap <Leader>s :w<CR>
+" nnoremap <Leader>s :w<CR>
 
 " ================ Navigation  ===========================
 " Toggle NERDtree
 map <C-n> :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>s :NERDTreeFind<CR>
 " Show hidden files by default
 let NERDTreeShowHidden=1
 

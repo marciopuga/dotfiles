@@ -9,7 +9,7 @@ alias pg='cd ~/code/playground'
 alias code='cd ~/code/'
 alias dot='cd ~/dotfiles/'
 alias temp='cd ~/code/temp'
-alias tac='cd ~/code/github/grumpysailor/tac'
+alias d9='cd ~/code/bitbucket/district9'
 alias deus='ssh deus'
 alias tmuxa='tmux a -t'
 alias lg='lazygit'
@@ -18,8 +18,6 @@ alias k='kubectl'
 alias serve='http-server'
 
 alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
 
 function killport() {
   echo "Killing processes on port $1"
@@ -34,3 +32,5 @@ export LESS_TERMCAP_se=$(printf '\e[0m') # leave standout mode
 export LESS_TERMCAP_so=$(printf '\e[01;33m') # enter standout mode
 export LESS_TERMCAP_ue=$(printf '\e[0m') # leave underline mode
 export LESS_TERMCAP_us=$(printf '\e[04;38;5;200m') # enter underline mode
+export VISUAL=vim
+export EDITOR=vim

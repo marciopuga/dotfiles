@@ -128,5 +128,18 @@ fi
 
 spaceship_vi_mode_enable
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/path.zsh.inc'; fi
+
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc'; fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/slss.zsh
