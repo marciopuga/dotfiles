@@ -32,5 +32,11 @@ export LESS_TERMCAP_se=$(printf '\e[0m') # leave standout mode
 export LESS_TERMCAP_so=$(printf '\e[01;33m') # enter standout mode
 export LESS_TERMCAP_ue=$(printf '\e[0m') # leave underline mode
 export LESS_TERMCAP_us=$(printf '\e[04;38;5;200m') # enter underline mode
+<<<<<<< HEAD
 export VISUAL=vim
 export EDITOR=vim
+=======
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+>>>>>>> 76d854a04dfae5b94a4bf4ef77ebb20c4832134d
