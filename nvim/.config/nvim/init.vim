@@ -20,6 +20,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
+Plug 'evanleck/vim-svelte'
 
 " Themes
 Plug 'flazz/vim-colorschemes'

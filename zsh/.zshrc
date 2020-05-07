@@ -119,6 +119,7 @@ bindkey '^[[Z' reverse-menu-complete
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/marciopuga/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+source $HOME/.bash_profile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
