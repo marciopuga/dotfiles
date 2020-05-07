@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "JavaScriptSnippets": "https://github.com/xabikos/vscode-javascript",
+    "coc-css": ">=1.2.3",
+    "coc-eslint": ">=1.2.6",
+    "coc-html": ">=1.2.4",
+    "coc-json": ">=1.2.5",
+    "coc-prettier": ">=1.1.12",
+    "coc-snippets": ">=2.1.26",
+    "coc-svelte": ">=0.0.2",
+    "coc-tslint": ">=1.0.17",
+    "coc-tsserver": ">=1.5.1",
+    "coc-yaml": ">=1.0.4",
+    "vscode-standardjs-snippets": "https://github.com/capaj/vscode-standardjs-snippets"
+  }
+}

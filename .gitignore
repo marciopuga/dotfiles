@@ -7,3 +7,4 @@ vim/.vim/.netrwhist
 ranger/.config/ranger/bookmarks
 ranger/.config/ranger/history
 *.log
+node_modules/
