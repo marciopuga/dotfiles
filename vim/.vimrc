@@ -85,7 +85,7 @@ imap jj <Esc> :w<CR>
 map <Esc><Esc> :w<CR>
 
 
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 " Copy entire buffer to
 noremap <silent> <Leader>y :%y<CR>
