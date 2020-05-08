@@ -12,7 +12,7 @@ alias d9='cd ~/code/bitbucket/district9'
 alias deus='ssh deus'
 alias tmuxa='tmux a -t'
 alias lg='lazygit'
-alias v='vim'
+alias v='nvim'
 alias k='kubectl'
 alias serve='http-server'
 
