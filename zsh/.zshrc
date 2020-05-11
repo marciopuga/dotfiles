@@ -60,13 +60,14 @@ plugins=(
   git
   docker
   web-search
+  history-substring-search
 )
 
 # Load default dotfiles
 source ~/.bash_profile
 
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
+export EDITOR=v
+export VISUAL=v
 
 bindkey -v
 
@@ -95,7 +96,7 @@ bindkey -M vicmd "^V" edit-command-line
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Make shift+tab work to reverse
@@ -128,6 +129,7 @@ if [ $commands[kubectl] ]; then
 fi
 
 spaceship_vi_mode_enable
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/marciopuga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marciopuga/google-cloud-sdk/path.zsh.inc'; fi

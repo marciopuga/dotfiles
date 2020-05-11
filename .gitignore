@@ -6,6 +6,7 @@ vim/.vim/plugged/
 vim/.vim/.netrwhist
 ranger/.config/ranger/bookmarks
 ranger/.config/ranger/history
+nvim/.config/configstore
 *.log
 node_modules/
 nvim/.config/filezilla

@@ -11,6 +11,7 @@
     "coc-tslint": ">=1.0.17",
     "coc-tsserver": ">=1.5.1",
     "coc-yaml": ">=1.0.4",
-    "vscode-standardjs-snippets": "https://github.com/capaj/vscode-standardjs-snippets"
+    "vscode-standardjs-snippets": "https://github.com/capaj/vscode-standardjs-snippets",
+    "vscode-svelte-snippets": "https://github.com/fivethree-team/vscode-svelte-snippets"
   }
 }
