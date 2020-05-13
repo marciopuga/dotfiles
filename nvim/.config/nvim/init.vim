@@ -16,11 +16,13 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'evanleck/vim-svelte'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -193,24 +195,6 @@ let NERDTreeShowHidden=1
 " Open VIMRC
 nnoremap <leader>v :e $MYVIMRC<CR>
 
-"" ctrlp.vim
-set wildmenu
-set wildmode=list:longest,list:full
-set wildignore=node_modules/*,jspm_packages/*,.DS_Store
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)|(\.(swp|tox|ico|git|hg|svn))$'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_use_caching = 1
-let g:ctrlp_show_hidden=1
-noremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_map = '<C-f>'
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-map <leader>r :CtrlPClearCache<cr>
-" CtrlP -> override <C-o> to provide options for how to open files
-let g:ctrlp_arg_map = 1
-
 "" Switching windows
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -249,23 +233,6 @@ let g:multi_cursor_quit_key            = '<Esc>'
 "EMMET CONFIG
 let g:user_emmet_leader_key=','
 set conceallevel=0
-
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  " bind \ (backward slash) to grep shortcut
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-  nnoremap \ :Ag<SPACE>
-endif
-
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -418,3 +385,26 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" FZF & Rg
+let g:fzf_preview_window = 'right:40%'
+
+set wildmenu
+set wildmode=list:longest,list:full
+set wildignore=node_modules/*,jspm_packages/*,.DS_Store
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+noremap <leader>r :Rg<CR>
+noremap <leader>b :Buffers<CR>
+noremap <leader>f :GFiles<CR>
+" noremap <c-f>:GFiles<CR>
+map <C-f> :GFiles<CR>
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --hidden --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
