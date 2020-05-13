@@ -24,12 +24,12 @@ Plug 'evanleck/vim-svelte'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'mtglsk/wikipedia.vim'
 Plug 'bcicen/vim-vice'
 Plug 'cseelus/vim-colors-lucid'
 Plug 'vim-scripts/Solarized'
 Plug 'dracula/vim'
-Plug 'TroyFletcher/vim-colors-synthwave'
 Plug 'gkjgh/cobalt'
 call plug#end()
 
@@ -75,6 +75,7 @@ imap jj <Esc> :w<CR>
 map <Esc><Esc> :w<CR>
 
 
+
 set clipboard^=unnamed,unnamedplus
 
 " Copy entire buffer to
@@ -118,12 +119,12 @@ colorscheme molokai
 
 " Go to colorscheme by number
 noremap <leader>1 :colorscheme molokai<cr>
-noremap <leader>2 :colorscheme Solarized<cr> :set background=dark<cr>
+noremap <leader>2 :colorscheme palenight<cr> :set background=dark<cr>
 noremap <leader>3 :colorscheme Dracula<cr>
 noremap <leader>4 :colorscheme lucid<cr>
 noremap <leader>5 :colorscheme vice<cr>
 noremap <leader>6 :colorscheme wikipedia<cr>
-noremap <leader>7 :colorscheme synthwave<cr>
+noremap <leader>7 :colorscheme Solarized<cr> :set background=dark<cr>
 noremap <leader>8 :colorscheme random<cr>
 noremap <leader>9 :colorscheme minimalist<cr>
 
