@@ -396,8 +396,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 noremap <leader>r :Rg<CR>
 noremap <leader>b :Buffers<CR>
 noremap <leader>f :GFiles<CR>
-" noremap <c-f>:GFiles<CR>
-map <C-f> :GFiles<CR>
+noremap <leader>F :Files<CR>
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --hidden --line-number --no-heading --color=always --smart-case -- %s || true'
