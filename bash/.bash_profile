@@ -5,18 +5,24 @@ export PATH="$HOME/.npm-packages/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/n
 #shotcuts
 alias cl='clear'
 alias pg='cd ~/code/playground'
+alias im='cd ~/code/bitbucket/immutable'
 alias code='cd ~/code/'
 alias dot='cd ~/dotfiles/'
 alias temp='cd ~/code/temp'
 alias d9='cd ~/code/bitbucket/district9'
 alias deus='ssh deus'
-alias tmuxa='tmux a -t'
 alias lg='lazygit'
 alias v='nvim'
 alias k='kubectl'
 alias serve='http-server'
 
 alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
+
+# tmux
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
 
 function killport() {
   echo "Killing processes on port $1"
