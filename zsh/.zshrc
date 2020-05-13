@@ -6,9 +6,9 @@ export RPS1="%{$reset_color%}"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="spaceship"
-DEFAULT_USER="marcipuga"
-SPACESHIP_VI_MODE_INSERT="[INSERT]"
-SPACESHIP_VI_MODE_NORMAL="[NORMAL]"
+DEFAULT_USER="marciopuga"
+SPACESHIP_VI_MODE_INSERT="[I]"
+SPACESHIP_VI_MODE_NORMAL="[N]"
 SPACESHIP_VI_MODE_SHOW="true"
 SPACESHIP_DOCKER_SHOW="false"
 SPACESHIP_KUBECONTEXT_SHOW="false"
@@ -63,8 +63,6 @@ plugins=(
   history-substring-search
 )
 
-# Load default dotfiles
-source ~/.bash_profile
 
 export EDITOR=v
 export VISUAL=v
@@ -122,7 +120,6 @@ export ZSH=/Users/marciopuga/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_profile
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
@@ -146,3 +143,5 @@ if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/slss.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
