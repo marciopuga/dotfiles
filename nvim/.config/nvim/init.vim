@@ -187,6 +187,7 @@ nnoremap <silent> <leader><space> :noh<cr>
 
 " ================ Navigation  ===========================
 " Toggle NERDtree
+:let g:NERDTreeWinSize=50
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>s :NERDTreeFind<CR>
 " Show hidden files by default

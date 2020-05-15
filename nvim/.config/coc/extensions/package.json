@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "JavaScriptSnippets": "https://github.com/xabikos/vscode-javascript",
+    "coc-angular": ">=0.901.6",
     "coc-css": ">=1.2.3",
     "coc-eslint": ">=1.2.6",
     "coc-html": ">=1.2.4",
