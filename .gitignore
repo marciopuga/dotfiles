@@ -10,4 +10,5 @@ nvim/.config/configstore
 *.log
 node_modules/
 nvim/.config/filezilla
+nvim/.config/coc/extensions/db.json
 gatsby/
