@@ -11,6 +11,7 @@ nvim/.config/configstore
 node_modules/
 nvim/.config/filezilla
 nvim/.config/coc/extensions/db.json
+nvim/.config/coc/extensions/node_modules
 nvim/.config/coc/history.json
 nvim/.config/coc/snippets-mru
 gatsby/

@@ -6,5 +6,26 @@
     "%2FUsers%2Fmarciopuga%2Fcode%2Fbitbucket%2Fnakatomi%2Fdisney-dna": [
       "exten"
     ]
+  },
+  "location": {
+    "%2FUsers%2Fmarciopuga%2Fcode%2Fbitbucket%2Fimmutable%2Fgu-cerberus": [
+      "fbq"
+    ]
+  },
+  "commands": {
+    "%2FUsers%2Fmarciopuga%2Fcode%2Fbitbucket%2Fimmutable%2Fgu-cerberus": [
+      " c c",
+      "game"
+    ]
+  },
+  "diagnostics": {
+    "%2FUsers%2Fmarciopuga%2Fcode%2Fbitbucket%2Fimmutable%2Fgu-cerberus": [
+      "jjjkj"
+    ]
+  },
+  "extensions": {
+    "%2FUsers%2Fmarciopuga%2Fcode%2Fbitbucket%2Fimmutable%2Fgu-cerberus": [
+      "e"
+    ]
   }
 }
