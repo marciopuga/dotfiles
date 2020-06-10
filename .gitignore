@@ -9,6 +9,7 @@ ranger/.config/ranger/history
 nvim/.config/configstore
 *.log
 node_modules/
+nvim/.config/truffle/
 nvim/.config/filezilla
 nvim/.config/coc/extensions/db.json
 nvim/.config/coc/extensions/node_modules
