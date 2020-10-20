@@ -23,6 +23,8 @@ Plug 'mattn/emmet-vim'
 Plug 'evanleck/vim-svelte'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -41,6 +43,9 @@ let mapleader = " "
 map <leader>= mzgg=G`z
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Jump to recently pasted
+nnoremap gp `[v`]
 
 " Always show cursor
 set ruler
