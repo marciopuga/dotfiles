@@ -1,4 +1,14 @@
 {
   "svelte.plugin.typescript.diagnostics.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": ["typescriptreact", "typescript", "javascript" ]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "svelte",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "css",
+    "markdown",
+    "html",
+    "javascript",
+    "javascriptreact"
+  ]
 }

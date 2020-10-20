@@ -44,6 +44,9 @@ map <leader>= mzgg=G`z
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" Jump to recently pasted
+nnoremap gp `[v`]
+
 " Always show cursor
 set ruler
 
