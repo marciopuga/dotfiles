@@ -45,7 +45,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:50%' --preview 'bat --color=always --style=header,grid {}'"
+# export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:50%' --previe 'bat --color=always --style=header,grid {}'"
 
 # fkill - kill processes - list only the ones you can kill. Modified the earlier script.
 fkill() {

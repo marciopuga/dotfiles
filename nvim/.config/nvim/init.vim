@@ -23,6 +23,8 @@ Plug 'mattn/emmet-vim'
 Plug 'evanleck/vim-svelte'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
