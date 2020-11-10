@@ -4,6 +4,7 @@ filetype off
 "" Plug install packages
 "*****************************************************************************
 call plug#begin('~/.vim/plugged')
+Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
