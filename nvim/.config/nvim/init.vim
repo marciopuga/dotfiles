@@ -15,7 +15,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
@@ -192,10 +191,8 @@ nnoremap <silent> <leader><space> :noh<cr>
 " nnoremap <Leader>s :w<CR>
 
 " ================ Navigation  ===========================
-" Toggle NERDtree
-:let g:NERDTreeWinSize=50
-map <C-n> :NERDTreeToggle<CR>
-nnoremap <leader>s :NERDTreeFind<CR>
+" nnoremap <leader>s :NERDTreeFind<CR>
+nmap <C-n> :CocCommand explorer<CR>
 " Show hidden files by default
 let NERDTreeShowHidden=1
 
