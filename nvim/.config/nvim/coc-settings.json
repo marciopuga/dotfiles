@@ -13,7 +13,7 @@
   ],
   "explorer.file.showHiddenFiles": true,
   "explorer.keyMappings.global": {
-    "i": false, // cancel default mapkey
+    "i": false,
 
     "gk": "expandablePrev",
     "gj": "expandableNext",
@@ -33,8 +33,8 @@
       "open"
     ],
     "o": ["expanded?", "collapse", "expand"],
-    "<cr>": ["expandable?", "cd", "open"],
-    "e": "open",
+    "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"],
+    "e": ["expandable?", "cd"],
     "s": "open:split",
     "S": "open:split:plain",
     "E": "open:vsplit",
