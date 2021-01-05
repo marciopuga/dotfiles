@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/marciopuga/.ssh'
+let g:netrw_dirhist_2='/Users/marciopuga/code/bitbucket/district9/apps/lab-pugacombr'
+let g:netrw_dirhist_1='/Users/marciopuga/code/d9-master/traefik/imixs-cloud/management/traefik'

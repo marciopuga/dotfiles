@@ -6,8 +6,7 @@ export RPS1="%{$reset_color%}"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="spaceship"
-DEFAULT_USER="marciopuga"
-SPACESHIP_VI_MODE_INSERT="[I]"
+DEFAULT_USER="marciopuga" SPACESHIP_VI_MODE_INSERT="[I]"
 SPACESHIP_VI_MODE_NORMAL="[N]"
 SPACESHIP_VI_MODE_SHOW="true"
 SPACESHIP_DOCKER_SHOW="false"
