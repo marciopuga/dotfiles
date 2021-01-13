@@ -145,3 +145,4 @@ if [ -f '/Users/marciopuga/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 [[ -f /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/marciopuga/code/bitbucket/nakatomi/serverless/node_modules/tabtab/.completions/slss.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
