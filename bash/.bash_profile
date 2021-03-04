@@ -1,5 +1,4 @@
-export PATH=$HOME/Library/Python/2.7/bin:$PATH
-export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$HOME/.npm-packages/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
